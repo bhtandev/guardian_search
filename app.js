@@ -1,4 +1,5 @@
-const React = require('react')
+import React from 'react';
+import Page from './src/pages/SearchPage';
 
 const App = () => {
   return (
@@ -7,6 +8,13 @@ const App = () => {
       <main className="pa4">
         <p>This is a simple starter kit for react</p>
         <p>Features</p>
+
+          <Page>
+
+
+
+          </Page>
+
         <ul>
           <li>JSX</li>
           <li>Tachyons</li>
