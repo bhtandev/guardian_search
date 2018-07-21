@@ -6,7 +6,7 @@ import ToggleButton from "../../components/ToggleButton";
 import Star from '../../components/images/Star';
 
 
-const Article = ({id, title, dateString, dateFormat, pinned, onPinned}) =>
+const Article = ({id, title, dateString, dateFormat, url, pinned, onPinned}) =>
     <Card title={title}
           style={{width: '100%'}}>
         <p>{moment(dateString).format(dateFormat)}</p>
@@ -20,7 +20,7 @@ const Article = ({id, title, dateString, dateFormat, pinned, onPinned}) =>
             pariatur. Excepteur sint occaecat cupidatat non
             proident, sunt in culpa qui officia deserunt mollit anim
             id est laborum</p>
-        <a href="javascript:void(0);">Read more...</a>
+        <a href={url} target="_blank">Read more...</a>
         <div style={{
             display: 'flex',
             justifyContent: 'flex-end',
@@ -32,6 +32,6 @@ const Article = ({id, title, dateString, dateFormat, pinned, onPinned}) =>
                 <Star/>
             </ToggleButton>
         </div>
-    </Card>
+    </Card>;
 
 export default Article;

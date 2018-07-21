@@ -17,7 +17,7 @@ const SpinLoader = styled.div`
     width: 40px;
     height: 40px;
     z-index: 999;
-    animation: ${rotate360} 2s linear infinite;
+    animation: ${rotate360} 1s linear infinite;
 `;
 
 export default SpinLoader;

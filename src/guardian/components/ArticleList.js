@@ -20,6 +20,7 @@ const ArticleList = ({newResultsGrouped, onFavClick}) => {
                                         title={article.webTitle}
                                         date={article.webPublicationDate}
                                         dateFormat="DD/MM/YYYY"
+                                        url={article.webUrl}
                                         pinned={article.pinned}
                                         onPinned={onFavClick}
                                     />);

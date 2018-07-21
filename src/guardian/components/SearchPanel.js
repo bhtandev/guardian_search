@@ -34,6 +34,11 @@ const renderPinnedArticles = (pinnedResults, onPinDelete) => {
         </HorizontalScroll> : null;
 };
 
+/**
+ * The search panel that is fixed. Contains the search box, and horizontal scrollable row for pinnied articles.
+ * @returns {*}
+ * @constructor
+ */
 const SearchPanel = ({pinnedResults, doSearch, status, onPinDelete}) =>
     <SearchPanelContainer>
         <SearchBox id="search-box" doSearch={doSearch} noSubmitButton={true}

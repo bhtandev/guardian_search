@@ -6,39 +6,9 @@ import Article from '../components/Article';
 import SearchPanel from '../components/SearchPanel';
 import ArticleList from "../components/ArticleList";
 
-const fakeResults = [
-    {
-        id: "environment/2018/jul/19/one-third-of-uk-supermarket-plastic-is-not-easily-recyclable-analysis-shows",
-        type: "article",
-        sectionId: "environment",
-        sectionName: "Environment",
-        webPublicationDate: "2018-07-19T05:30:36Z",
-        webTitle: "One-third of UK supermarket plastic is not easily recyclable, analysis shows",
-        isHosted: false,
-        pillarId: "pillar/news",
-        pillarName: "News",
-    }, {
-        id: "travel/2018/jul/19/road-trips-driving-holidays-readers-tips",
-        type: "article",
-        sectionId: "travel",
-        sectionName: "Travel",
-        webPublicationDate: "2018-07-19T05:30:36Z",
-        webTitle: "10 great road trips around the world: readers’ tips",
-        pillarId: "pillar/lifestyle",
-        pillarName: "Lifestyle",
-    }, {
-        id: "world/2018/jul/19/thursday-briefing-anna-chapman-with-real-pistols",
-        type: "article",
-        sectionId: "world",
-        sectionName: "World news",
-        webPublicationDate: "2018-07-19T05:25:09Z",
-        webTitle: "Thursday briefing: 'Anna Chapman with real pistols'",
-        pillarId: "pillar/news",
-        pillarName: "News",
-    },
-];
-
-
+/**
+ * Smart Container containing the logic to make API call and manage the child components.
+ */
 class Page extends Component {
     constructor(props) {
         super(props);
@@ -58,6 +28,10 @@ class Page extends Component {
         return apiCaller(searchText);
     };
 
+    /**
+     * Function to call the API and populate the page
+     * @param searchText
+     */
     doSearchAndSetForDisplay = (searchText) => {
         console.log(`Searching ${searchText}`);
 
@@ -94,9 +68,24 @@ class Page extends Component {
                 status,
                 pages
             });
+        }).catch((error) => {
+            //reset results
+            this.setState({
+                results: [],
+                currentPage: 0,
+                total: 0,
+                pageSize: 0,
+                pages: 0,
+                status: 'not_ok', //simple error return
+            });
         })
     };
 
+    /**
+     * Function to group the results into sections.
+     * @param results Search results
+     * @returns {{}} Dictionary with section Id as the key. The value to the key contains list of articles from the search.
+     */
     groupUpResults = (results) => {
         let newResultsGrouped = {};
 
@@ -116,6 +105,10 @@ class Page extends Component {
         return newResultsGrouped;
     };
 
+    /**
+     * To remove pinned item from the bar below the search box.
+     * @param id Id of the article.
+     */
     onFavDelete = (id) => {
         const {results, pinnedResults} = this.state;
 
@@ -123,7 +116,6 @@ class Page extends Component {
         const alreadyPinned = results.find(pinned => (id === pinned.id) && pinned.pinned);
 
         if (alreadyPinned) {
-
             const updatedResults = results.map((result) => (result.id === id) ? {
                 ...result,
                 pinned: !result.pinned
@@ -141,7 +133,10 @@ class Page extends Component {
         }
     };
 
-
+    /**
+     * To pin an article to the bar below the search box.
+     * @param id Id of the article
+     */
     onFavClick = (id) => {
         const {results, pinnedResults} = this.state;
 
@@ -168,6 +163,10 @@ class Page extends Component {
         }
     };
 
+    /**
+     * Get appropriate status text for the search process including during and after search just completed.
+     * @returns {{type: string, text: string}}
+     */
     getStatus = () => {
         const { loading, total, currentPage, pageSize, status } = this.state;
 
@@ -194,9 +193,6 @@ class Page extends Component {
         const newResultsGrouped = this.groupUpResults(results);
 
         const status = this.getStatus();
-        console.log('render', newResultsGrouped);
-        console.log('pinnedResults', pinnedResults);
-        console.log('status', status);
 
         return (
             <div style={{width: '100%', height: '100%', position: 'relative'}}>
