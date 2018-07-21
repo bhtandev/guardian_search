@@ -6,10 +6,10 @@ const Button = styled.button`
   align-content: 'center';
   background: ${props => props.primary ? ' #E9967A' : 'white'};
   color: ${props => props.primary ? 'white' : ' #E9967A'};
-  border-radius: ${props => props.borderRadius ? props.borderRadius : '3px'};
+  border-radius: ${props => props.borderRadius ? props.borderRadius : '8px'};
 
-  border: 2px solid  #E9967A;
-  height: 40px;
+  border: 2px solid ${props => props.primary ? ' #E9967A' : 'black'};
+  height: 35px;
   width: 40px;
 
   outline: none;

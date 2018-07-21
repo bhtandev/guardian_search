@@ -19,6 +19,7 @@ const StyledCard = styled.div`
 const Card = (props) =>
     <StyledCard>
         <h4>{props.title}</h4>
+        <hr/>
         {props.children}
     </StyledCard>;
 
