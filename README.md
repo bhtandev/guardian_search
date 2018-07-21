@@ -58,7 +58,9 @@ npm start
 
 ## DEMO
 
-Up on Glitch 
+[Link](https://bhtandev.github.io/guardian_search/)
+
+Up on Glitch too
 
 [https://bhtandev-guardian-search.glitch.me/](https://bhtandev-guardian-search.glitch.me/)
 
