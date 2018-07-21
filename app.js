@@ -1,29 +1,21 @@
 import React from 'react';
-import Page from './src/pages/SearchPage';
+import FixedHeader from './src/components/FixedHeader';
+import Title from './src/components/Title';
+import ResponsivePage from './src/components/ResponsiveContainer';
+
+import Page from './src/guardian/pages/SearchPage';
 
 const App = () => {
-  return (
-    <div>
-      <h1 className="pa4 blue bg-yellow">React Simple Starter</h1>
-      <main className="pa4">
-        <p>This is a simple starter kit for react</p>
-        <p>Features</p>
+    return (
+        <div style={{height: '100%', display: 'flex', justifyContent: 'center'}}>
+            <FixedHeader>
+                <Title>Guardian</Title>
+            </FixedHeader>
+            <ResponsivePage>
+                <Page/>
+            </ResponsivePage>
+        </div>
+    )
+};
 
-          <Page>
-
-
-
-          </Page>
-
-        <ul>
-          <li>JSX</li>
-          <li>Tachyons</li>
-        </ul>
-        <a href="https://glitch.com/edit/#!/react-starter-kit#README.md"><img src="https://img.shields.io/badge/glitch-remix-green.svg" /></a>
-      </main>
-    </div>
-    
-  )
-}
-
-module.exports = App
+export default App;

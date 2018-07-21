@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack-dev-server --mode development --open",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "wzrd index.js --port 3000 --pushstate -- -t babelify"
   },
@@ -12,19 +13,26 @@
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "babelify": "^8.0.0",
     "browserify": "^14.5.0",
+    "html-webpack-plugin": "^3.2.0",
     "reactify": "^1.1.1",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.4",
     "wzrd": "^1.5.0"
   },
   "dependencies": {
-    "@material-ui/core": "^1.4.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "moment": "^2.22.2",
     "react": "^16.3.0",
     "react-dom": "^16.4.1",
-    "tachyons": "^4.7.0"
+    "styled-components": "^3.3.3",
+    "velocity": "^0.7.2",
+    "velocity-animate": "^2.0.5"
   }
 }

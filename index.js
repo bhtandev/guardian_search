@@ -1,11 +1,8 @@
-const React = require('react')
-const { render } = require('react-dom')
+import React from 'react';
+import { render } from 'react-dom';
 
-const App = require('./app')
+import App from './app';
 
 
 // bootstrap react
-render(
-    <div>
-        <App />
-    </div>, document.getElementById('root'))
+render(<App/>, document.getElementById('root'));
