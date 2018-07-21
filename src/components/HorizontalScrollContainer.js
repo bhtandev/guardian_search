@@ -7,6 +7,8 @@ const HorizontalScrollContainer = style.section`
   justify-content: ${props =>props.justifyContent? props.justifyContent : 'center'}
   min-height: 50px;
   overflow-x: auto;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 10 10 0 10;
   &:scrollbar {
     display: none;
