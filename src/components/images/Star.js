@@ -1,0 +1,7 @@
+import React from 'react';
+
+const Star = () =>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAABE0lEQVR4Ac3LweuLARyA8c/bb7elRslxLZID2i5OykXYhSRONLlsf8JSDtxWCkUObhy5SVJykgsnDu5jkxxYi7Z58/UebK3V+/Y68XnOj3/mUNZfeeA+5e0yN7NTaVeEcFlJFR+9y/pgSynnhK6ecEahmr0OO+2Nr6pZ37x21hH77JBYp29kLlbdADfFqoWxvpXEQPjluguOa6mCqpYTOn/GgYR1PamhAzbtN5Tqwqa2qYlj1h01MdWWo2nkp7qluoWRpgKPTG1ZqvjuoUKfPAennAQvjBXYI1y12xMhPNZwTWjI1RGemUndykr98FQ4L9c9Ibx0EDS9EsJdud777KLEUuKSL97KUXNbzabt7tjmf/Yb2Ttcq8+0JAYAAAAASUVORK5CYII=
+"/>
+
+export default Star;
