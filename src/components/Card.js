@@ -11,16 +11,16 @@ const StyledCard = styled.div`
     text-align: left;
   }
 
-    &:hover {
-     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-     }
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
 `;
 
 const Card = (props) =>
     <StyledCard>
         <h4>{props.title}</h4>
         {props.children}
-    </StyledCard>
+    </StyledCard>;
 
 export default Card;
 
