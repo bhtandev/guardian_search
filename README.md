@@ -22,6 +22,7 @@ Section of the Guardian the items are found in. - **Complete**
 * The results for each item should show the Title, link and publication date
 (formatted as DD/MM/YYYY). - **Complete**
   - Title, link(using hyperlink text of 'Read more...') and date shown in required format shown for each article.
+  - Added extra 'Lorem ipsum...' text to act as article summary for 'prototype' purposes.
 
 * Each item should have a button/checkbox that
 allows it to be bookmarked/pinned. Pinned items should appear below the
@@ -33,7 +34,6 @@ search results, and stay on screen as search results change. - **Complete**
 
 **NOTE** - This is a prototype only. Displays only 10 results from page 1. Pagination required for complete solution.
             Can be achived using infinite scrolling to call next page search when button of page is reached or introduce pagination buttons.
-
 
 ### Questions
 
