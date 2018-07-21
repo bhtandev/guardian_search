@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledCard = styled.div`
-    margin: 10px;
-    padding: 10px;
+    margin: 15px;
+    padding: 15px;
     text-align: center;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);

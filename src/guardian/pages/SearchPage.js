@@ -195,19 +195,19 @@ class Page extends Component {
         const status = this.getStatus();
 
         return (
-            <div style={{width: '100%', height: '100%', position: 'relative'}}>
+            <div style={{height: '100%', position: 'relative'}}>
                 {loading &&
                 <LoaderBox>
                     <SpinLoader/>
                 </LoaderBox>}
-                <div style={{width: '100%', height: '100%'}}>
+                <div>
                     <SearchPanel
                         pinnedResults={pinnedResults}
                         doSearch={this.doSearchAndSetForDisplay}
                         status={status}
                         onPinDelete={this.onFavDelete}
                     />
-                    <div style={{top: '110px', left: '0', width: '100%', position: 'absolute', margin: 'auto'}}>
+                    <div style={{top: '110px', left: '0', position: 'absolute', margin: 'auto'}}>
                         <ArticleList newResultsGrouped={newResultsGrouped} onFavClick={this.onFavClick}/>
                     </div>
                 </div>

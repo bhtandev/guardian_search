@@ -11,8 +11,8 @@ const rotate360 = keyframes`
 `;
 
 const SpinLoader = styled.div`
-    border: 4px solid #f3f3f3; /* Light grey */
-    border-top: 4px solid #E9967A; /* Blue */
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #E9967A; 
     border-radius: 50%;
     width: 40px;
     height: 40px;
