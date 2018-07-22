@@ -32,10 +32,22 @@ search results, and stay on screen as search results change. - **Complete**
   - Pinned chips are controlled by a horizontal capable scrolling container. Useful when there are too many chips or when screen is small (mobile devices)
   - Users can unpin it by clicking the same button or clicking delete on the pinned chips.
 
-**NOTE** - This is a prototype only. Displays only 10 results from page 1. Pagination required for complete solution.
+**NOTE** - This is a _prototype/proof of concept_ only. Displays only 10 results from page 1. Pagination required for complete solution.
             Can be achived using infinite scrolling to call next page search when button of page is reached or introduce pagination buttons.
+            Currently style is almost bare bones. Class names place holder can be added to support custom styling later. 
 
-### Questions
+### Questions To Ask Project Team
+1. What is the scope and constraints of this project?
+ -  Identify key dates and milestones, tech stack allowed
+2. What browsers to support? What platforms are we designing for?
+ - Legacy browsers can alter design decisions ( javascript , css )
+3. Where to get info or details on elements of design that aren't apparent from the mock ups? 
+ - Color codes, font details, height/width dimensions, third party UI packages
+4. Expected flow
+ - Mockups only half the work. Better with understanding on how users are going to use it.
+5. Ask why! What problem we solving?
+ - Crucial to understand to get context and come up with better solution
+ 
 
 ## Installing
 
